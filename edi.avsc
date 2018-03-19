@@ -1,0 +1,469 @@
+{"namespace": "edi.avro",
+"type": "record",
+"name": "EDIClaims",
+"fields": [
+    {"name": "rowid", "type": "string"},
+    {"name": "inputfile", "type": "string"},
+    {"name": "claimheader400a",
+        "type": {
+                "type": "record",
+                "name": "400a",
+                "fields":
+                  [
+                    { "name": "recordtype", "type": "string"},
+                    { "name": "record-aggregator", "type": "string"},
+                    { "name": "record-type", "type": "string"},
+                    { "name": "record-type-seq", "type": "string"},
+                    { "name": "record-type-qual", "type": "string"},
+                    { "name": "record-type-qual-seq", "type": "string"},
+                    { "name": "header-sender-id", "type": "string"},
+                    { "name": "prod-or-test", "type": "string"},
+                    { "name": "group-submitter-id", "type": "string"},
+                    { "name": "group-receiver-id", "type": "string"},
+                    { "name": "hipaa-release", "type": "string"},
+                    { "name": "received-date", "type": "string"},
+                    { "name": "claim-or-encounter-ind", "type": "string"},
+                    { "name": "service-category", "type": "string"},
+                    { "name": "brand-ind", "type": "string"},
+                    { "name": "claim-routed-to", "type": "string"},
+                    { "name": "compliance-expected", "type": "string"},
+                    { "name": "submitter-type", "type": "string"},
+                    { "name": "submitter-id-qual", "type": "string"},
+                    { "name": "submitter-id", "type": "string"},
+                    { "name": "submitter-name-type", "type": "string"},
+                    { "name": "submitter-name-last", "type": "string"},
+                    { "name": "submitter-name-first", "type": "string"},
+                    { "name": "submitter-name-middle", "type": "string"},
+                    { "name": "receiver-receiver-id", "type": "string"},
+                    { "name": "medicare-crossover-ind", "type": "string"},
+                    { "name": "enterprise-edi-dcn", "type": "string"},
+                    { "name": "local-system-dcn-1", "type": "string"},
+                    { "name": "local-system-dcn-2", "type": "string"},
+                    { "name": "sender-group-control", "type": "string"},
+                    { "name": "filler", "type": "string"}
+                  ]
+                }
+    },
+    { "name": "submittercontactinfo400b",
+        "type": {
+                "type": "record",
+                "name": "400b",
+                "fields":
+                  [
+                    { "name": "recordtype", "type": "string"},
+                    { "name": "record-aggregator", "type": "string"},
+                    { "name": "record-type", "type": "string"},
+                    { "name": "record-type-seq", "type": "string"},
+                    { "name": "record-type-qual", "type": "string"},
+                    { "name": "record-type-qual-seq", "type": "string"},
+                    { "name": "submitr-contact-name", "type": "string"},
+                    { "name": "submitr-contact-qual", "type": "string"},
+                    { "name": "submitr-contact-number", "type": "string"},
+                    { "name": "filler", "type": "string"}
+                  ]
+                }
+    },
+    {"name": "billingprovider401a",
+        "type": {
+                 "type": "record",
+                 "name": "401a",
+                 "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "provider-type", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "name-last-or-org", "type": "string"},
+                        { "name": "name-first", "type": "string"},
+                        { "name": "name-middle", "type": "string"},
+                        { "name": "name-suffix", "type": "string"},
+                        { "name": "provider-id-qual", "type": "string"},
+                        { "name": "provider-id", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "provider-other-id-tbl", "type": "string"},
+                        { "name": "taxonomy-code-list-id", "type": "string"},
+                        { "name": "taxonomy-code", "type": "string"},
+                        { "name": "currency-code", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                 }
+    },
+    {"name": "billingprovidercontactinfo401b",
+     "type": {
+              "type": "record",
+              "name": "401b",
+              "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "billing-contact-name", "type": "string"},
+                        { "name": "billing-contact-qual", "type": "string"},
+                        { "name": "billing-contact-number", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "pay-toprovider402a",
+     "type": {
+               "type": "record",
+               "name": "402a",
+               "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "provider-type", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "pay-toplan410a",
+     "type": {
+              "type": "record",
+              "name": "410a",
+              "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "pay-to-plan-qual", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "name-last-or-org", "type": "string"},
+                        { "name": "plan-id-qual", "type": "string"},
+                        { "name": "plan-id", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "plan-other-id-table", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "subscriber421a",
+     "type": {
+             "type": "record",
+             "name": "421a",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "subscriber-type", "type": "string"},
+                        { "name": "payer-responsblty-seq", "type": "string"},
+                        { "name": "relationship-code", "type": "string"},
+                        { "name": "group-number", "type": "string"},
+                        { "name": "group-name", "type": "string"},
+                        { "name": "insurance-type", "type": "string"},
+                        { "name": "claim-filing-indicator", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "name-last-or-org", "type": "string"},
+                        { "name": "name-first", "type": "string"},
+                        { "name": "name-middle", "type": "string"},
+                        { "name": "name-suffix", "type": "string"},
+                        { "name": "membership-id-qual", "type": "string"},
+                        { "name": "membership-id", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "date-of-birth", "type": "string"},
+                        { "name": "gender-code", "type": "string"},
+                        { "name": "subscrbr-other-id-tbl", "type": "string"},
+                        { "name": "its-relationship-code", "type": "string"},
+                        { "name": "its-sec-payor-prc-ind", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "payer422a",
+     "type": {
+             "type": "record",
+             "name": "422a",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "payer-type", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "name-last-or-org", "type": "string"},
+                        { "name": "payer-id-qual", "type": "string"},
+                        { "name": "payer-id  ", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "payer-other-id-table", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "patient441a",
+     "type": {
+             "type": "record",
+             "name": "441a",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "date-of-death", "type": "string"},
+                        { "name": "patient-weight-qual", "type": "string"},
+                        { "name": "patient-weight", "type": "string"},
+                        { "name": "pregnancy-indicator", "type": "string"},
+                        { "name": "relationship-code", "type": "string"},
+                        { "name": "patient-type", "type": "string"},
+                        { "name": "name-type", "type": "string"},
+                        { "name": "name-last-or-org", "type": "string"},
+                        { "name": "name-first", "type": "string"},
+                        { "name": "name-middle", "type": "string"},
+                        { "name": "name-suffix", "type": "string"},
+                        { "name": "street-address-1", "type": "string"},
+                        { "name": "street-address-2", "type": "string"},
+                        { "name": "city-name", "type": "string"},
+                        { "name": "state-code", "type": "string"},
+                        { "name": "zip-code", "type": "string"},
+                        { "name": "country-code", "type": "string"},
+                        { "name": "country-subdivision", "type": "string"},
+                        { "name": "date-of-birth", "type": "string"},
+                        { "name": "gender-code", "type": "string"},
+                        { "name": "its-relationship-code", "type": "string"},
+                        { "name": "its-employment-status", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "claim-basic461a",
+     "type": {
+             "type": "record",
+             "name": "461a",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "patient-account-number", "type": "string"},
+                        { "name": "total-charges", "type": "string"},
+                        { "name": "type-of-bill", "type": "string"},
+                        { "name": "facility-code-qual", "type": "string"},
+                        { "name": "service-category", "type": "string"},
+                        { "name": "provider-signature-ind", "type": "string"},
+                        { "name": "provider-accpts-assign", "type": "string"},
+                        { "name": "benft-assignd-auth-ind", "type": "string"},
+                        { "name": "release-of-info-ind", "type": "string"},
+                        { "name": "patient-signature-src", "type": "string"},
+                        { "name": "related-causes-table", "type": "string"},
+                        { "name": "related-causes-state", "type": "string"},
+                        { "name": "related-causes-country", "type": "string"},
+                        { "name": "special-program-code", "type": "string"},
+                        { "name": "provider-agreemnt-code", "type": "string"},
+                        { "name": "predeterm-benefit-code", "type": "string"},
+                        { "name": "delay-reason-code", "type": "string"},
+                        { "name": "admission-date-qual", "type": "string"},
+                        { "name": "admission-date", "type": "string"},
+                        { "name": "admission-time", "type": "string"},
+                        { "name": "discharge-date-qual", "type": "string"},
+                        { "name": "discharge-date", "type": "string"},
+                        { "name": "discharge-time", "type": "string"},
+                        { "name": "statement-date-qual", "type": "string"},
+                        { "name": "statement-from-date", "type": "string"},
+                        { "name": "statement-thru-date", "type": "string"},
+                        { "name": "onset-date-qual", "type": "string"},
+                        { "name": "onset-date", "type": "string"},
+                        { "name": "ortho-trtmt-mos", "type": "string"},
+                        { "name": "ortho-trtmt-mos-rem", "type": "string"},
+                        { "name": "orthodonture-ind", "type": "string"},
+                        { "name": "tooth-status-table", "type": "string"},
+                        { "name": "admission-type", "type": "string"},
+                        { "name": "admission-source", "type": "string"},
+                        { "name": "patient-status", "type": "string"},
+                        { "name": "contract-type", "type": "string"},
+                        { "name": "contract-amt", "type": "string"},
+                        { "name": "contract-percent", "type": "string"},
+                        { "name": "contract-code", "type": "string"},
+                        { "name": "contract-discnt-pct", "type": "string"},
+                        { "name": "contract-version-id", "type": "string"},
+                        { "name": "specified-amt-qual", "type": "string"},
+                        { "name": "specified-amt", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "claim-levelspecialreferences461f",
+     "type": {
+             "type": "record",
+             "name": "461f",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "reference-number-table", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "diagnosiscodes461l",
+     "type": {
+             "type": "record",
+             "name": "461l",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "diagnosis-table", "type": "string"},
+                        { "name": "drg-code-qual", "type": "string"},
+                        { "name": "drg-code", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "serviceline-basic465a",
+     "type": {
+             "type": "record",
+             "name": "465a",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "procedure-code-qual", "type": "string"},
+                        { "name": "procedure-code", "type": "string"},
+                        { "name": "procedure-modifr-table", "type": "string"},
+                        { "name": "procedure-description", "type": "string"},
+                        { "name": "line-charge", "type": "string"},
+                        { "name": "service-units-qual", "type": "string"},
+                        { "name": "service-units", "type": "string"},
+                        { "name": "facility-code", "type": "string"},
+                        { "name": "diag-code-pointer-tbl", "type": "string"},
+                        { "name": "emergency-ind", "type": "string"},
+                        { "name": "early-psdt-ind", "type": "string"},
+                        { "name": "family-planning-ind", "type": "string"},
+                        { "name": "copay-status", "type": "string"},
+                        { "name": "dme-procedur-code-qual", "type": "string"},
+                        { "name": "dme-procedur-code", "type": "string"},
+                        { "name": "dme-days-qual", "type": "string"},
+                        { "name": "dme-days ", "type": "string"},
+                        { "name": "dme-rental-amount", "type": "string"},
+                        { "name": "dme-purchase-amount", "type": "string"},
+                        { "name": "dme-rental-frequency", "type": "string"},
+                        { "name": "dme-certificate-type", "type": "string"},
+                        { "name": "dme-duration-qual", "type": "string"},
+                        { "name": "dme-duration", "type": "string"},
+                        { "name": "service-date-qual", "type": "string"},
+                        { "name": "service-from-date", "type": "string"},
+                        { "name": "service-thru-date", "type": "string"},
+                        { "name": "contract-type", "type": "string"},
+                        { "name": "contract-amount", "type": "string"},
+                        { "name": "contract-percent", "type": "string"},
+                        { "name": "contract-code", "type": "string"},
+                        { "name": "contract-discnt-pct", "type": "string"},
+                        { "name": "contract-version-id", "type": "string"},
+                        { "name": "sales-tax-qual", "type": "string"},
+                        { "name": "sales-tax-amt", "type": "string"},
+                        { "name": "postage-claimed-qual", "type": "string"},
+                        { "name": "postage-claimed-amt", "type": "string"},
+                        { "name": "purchasd-svc-provider", "type": "string"},
+                        { "name": "purchasd-svc-amt", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    { "name": "service-levelspecialreferences465l",
+     "type": {
+            "type": "record",
+            "name": "465l",
+            "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "reference-number-table", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    },
+    {"name": "claimtrailer499x",
+     "type": {
+             "type": "record",
+             "name": "499x",
+             "fields":
+                    [
+                        { "name": "recordtype", "type": "string"},
+                        { "name": "record-aggregator", "type": "string"},
+                        { "name": "record-type", "type": "string"},
+                        { "name": "record-type-seq", "type": "string"},
+                        { "name": "record-type-qual", "type": "string"},
+                        { "name": "record-type-qual-seq", "type": "string"},
+                        { "name": "claim-record-count", "type": "string"},
+                        { "name": "claim-service-count", "type": "string"},
+                        { "name": "sum-of-line-charges", "type": "string"},
+                        { "name": "filler", "type": "string"}
+                    ]
+                }
+    }
+]
+}
